@@ -30,7 +30,7 @@ module.exports = {
           ],
           publicPath: "/dest"
         })
-      },
+      }
     ]
   },
   plugins: [
