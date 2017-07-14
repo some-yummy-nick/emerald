@@ -1,0 +1,13 @@
+.about {
+  color: $accent-color;
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__block {
+    width: 555px;
+  }
+  &__text {
+    margin-bottom: 20px;
+  }
+}

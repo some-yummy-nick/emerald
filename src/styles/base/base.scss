@@ -7,60 +7,124 @@ html {
 *:after {
   box-sizing: inherit;
 }
+
 html,
 body {
   height: 100%;
 }
-html{
-  // set background color for overscroll
+
+html {
+  background-color: #fff;
 }
+
 body {
   min-height: 100vh;
   position: relative;
   font-family: $font;
   margin: 0;
   padding: 0;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
   line-height: 1.42;
   overflow-x: hidden;
 }
+
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
+  margin-bottom: 0;
   font-weight: normal;
 }
-img{
+
+img {
   display: block;
   max-width: 100%;
   height: auto;
 }
-a{
+
+a {
   color: inherit;
-  &:hover{
-    text-decoration: none;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
   }
 }
-.wrapper{
+
+p {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.wrapper {
   display: table;
   height: 100%;
   width: 100%;
 }
-.content{
+
+.content {
   display: table-row;
   height: 100%;
 }
-.noscript{
+
+.noscript {
   display: block;
   text-align: center;
   position: fixed;
   opacity: 0.7;
-  top: 0 ;
+  top: 0;
   left: 50%;
   width: 300px;
   margin-left: -150px;
   color: #0000AA;
   background: #ff7b93;
 }
-.container{
+
+.container {
   @include container;
+}
+
+.js-visible {
+  @include elementVisible;
+}
+
+.js-hided {
+  @include elementInvisible;
+}
+
+.btn {
+  width: 165px;
+  height: 30px;
+  border: 1px solid white;
+  border-radius: 15px;
+  background-color: transparent;
+  color: #fff;
+  &:hover {
+    cursor: pointer;
+    background-color: white;
+    color: $accent-color;
+  }
+}
+
+section {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.section__title {
+  font-family: Kurale;
+  font-size: 42px;
+  text-align: center;
+  &--white {
+    color: #fff;
+  }
+}
+.instagram {
+  display: block;
+  text-align: center;
+  background-image: url('../images/instagram.png');
+  background-repeat: no-repeat;
+  background-position-x: 140px;
+  padding-left: 50px;
+  padding-bottom: 5px;
+  font-size: 24px;
+  font-weight: 700;
 }

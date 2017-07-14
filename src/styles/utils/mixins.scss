@@ -9,22 +9,12 @@
   }
 }
 
-
-
 @mixin container {
-  width: 97%;
-  margin-right:  auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
   margin-left: auto;
-  max-width: 1300px;
-  @media ($tablet-widths) {
-    max-width: 640px;
-  }
-  @media ($desktop-widths) {
-    max-width: 960px;
-  }
-  @media ($large-widths) {
-    max-width: 1200px;
-  }
+  width: 1170px;
 }
 
 @mixin img{
@@ -149,7 +139,7 @@
 
 /// Reverses the CSS output created by the `elementInvisible` mixin.
 @mixin elementVisible {
-  position: static !important;
+  position: absolute !important;
   height: auto;
   width: auto;
   overflow: visible;

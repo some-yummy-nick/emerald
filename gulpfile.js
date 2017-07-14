@@ -161,13 +161,13 @@ gulp.task('clean', () => {
 
 gulp.task("favicons", function () {
   return gulp.src("src/images/logo.png").pipe(favicons({
-    appName: "My App",
+    appName: "Emerald",
     appDescription: "This is my application",
     developerName: "Marat Shaymardanov",
     developerURL: "http://tatarchap.p-host.in/",
     background: "#020307",
     path: "favicons/",
-    url: "http://haydenbleasel.com/",
+    url: "http://tatarchap.p-host.in/",
     display: "standalone",
     orientation: "portrait",
     start_url: "/?homescreen=1",

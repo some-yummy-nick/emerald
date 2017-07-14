@@ -1,0 +1,27 @@
+.hamburger .line{
+  width: 20px;
+  height: 2px;
+  background-color: #ecf0f1;
+  display: block;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+}
+.hamburger{
+  width: 35px;
+  height: 35px;
+  padding-top: 3px;
+  margin-right: 20px;
+  border: 1px solid #fff;
+  border-radius: 100%;
+}
+.hamburger:hover{
+  cursor: pointer;
+}
+
+.hamburger.is-active .line:nth-child(1){
+  transform: translateY(8px);
+}
+
+.hamburger.is-active .line:nth-child(3){
+  transform: translateY(-8px);
+}
