@@ -1,9 +1,17 @@
 .wave {
-  background: transparent;
-  height: 21px;
-  width: 100%;
   position: absolute;
   bottom: 0;
+  z-index: 3;
+  height: 21px;
+  width: 100%;
+  background-color: transparent;
   background-image: url('../images/wave.png');
   background-repeat: repeat-x;
 }
+.about{
+  .wave{
+    bottom: -21px;
+    transform: rotate(180deg);
+  }
+}
+

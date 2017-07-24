@@ -41,16 +41,14 @@
 }
 
 @mixin marginRight($margin-right:20px) {
-  margin-right: $margin-right;
-  &:last-child {
-    margin-right: 0;
+  &:not(:last-child) {
+    margin-right: $margin-right;
   }
 }
 
 @mixin marginLeft($margin-left:20px) {
-  margin-left: $margin-left;
-  &:first-child {
-    margin-left: 0;
+  &:not(:first-child) {
+    margin-left: $margin-left;
   }
 }
 

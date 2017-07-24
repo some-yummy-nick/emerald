@@ -20,8 +20,10 @@ sync = require('browser-sync').create(),
   jpegtran = require('imagemin-jpegtran'),
   optipng = require('imagemin-optipng'),
   svgo = require('imagemin-svgo'),
+  stylefmt = require('gulp-stylefmt'),
   pngquant = require('imagemin-pngquant'),
   imageminJpegRecompress = require('imagemin-jpeg-recompress'),
+  purify = require('gulp-purifycss'),
   path = require('path');
 
 
@@ -31,7 +33,6 @@ let processors = [
       imagePath: './src/images/',
       spritePath: './src/images'
     }),
-    require('postcss-flexibility'),//для поддержки flexbox в ie 8 & 9
     require('postcss-line-height-px-to-unitless')(), //line-height из px в число
     require('postcss-inline-svg')(), //вставка svg в css
     require('postcss-filter-gradient'),//поддержка градиентов ниже ie9
@@ -46,7 +47,7 @@ let processors = [
     })
   ],
   assets = [
-    'src/fonts{,/**}',
+    'src/libraries{,/**}',
     '!src/html{,/**}',
     '!src/styles{,/**}',
     '!src/scripts/script.js',
@@ -85,10 +86,11 @@ gulp.task('styles', () => {
     }))
     .pipe(sass())
     .pipe(postcss(processors))
-    .pipe(csscomb())
     .pipe(gulpIf(NODE_ENV === 'development',
       sourcemaps.write()
     ))
+    .pipe(purify(['./dest/js/**/*.js', './dest/**/*.html']))
+    .pipe(stylefmt())
     .pipe(gulpIf(NODE_ENV === 'production',
       cssnano()
     ))
@@ -182,9 +184,21 @@ gulp.task("favicons", function () {
     .pipe(gulp.dest("dest/favicons"));
 });
 
+gulp.task('lint-css', function lintCssTask() {
+  const gulpStylelint = require('gulp-stylelint');
+
+  return gulp
+    .src('dest/styles/style.css')
+    .pipe(gulpStylelint({
+      reporters: [
+        {formatter: 'string', console: true}
+      ]
+    }));
+});
+
 gulp.task('build', () => {
-  runSequence('clean', ['copy', 'images', 'styles', 'favicons'], 'html');
+  runSequence( ['copy', 'images', 'favicons'], 'html', 'styles');
 });
 gulp.task('default', () => {
-  runSequence(['copy', 'images', 'styles'], 'html', 'server', 'watch');
+  runSequence(['copy', 'images'], 'html','styles', 'server', 'watch');
 });

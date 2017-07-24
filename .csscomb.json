@@ -4,28 +4,29 @@
     "node_modules/**"
   ],
 
-  "remove-empty-rulesets": true,
   "always-semicolon": true,
   "color-case": "lower",
   "block-indent": "  ",
   "color-shorthand": true,
   "element-case": "lower",
-  "eof-newline": true,
+  "eof-newline": false,
   "leading-zero": true,
   "quotes": "double",
   "sort-order-fallback": "abc",
   "space-before-colon": "",
   "space-after-colon": " ",
   "space-before-combinator": "",
-  "space-after-combinator": " ",
+  "space-after-combinator": "",
   "space-between-declarations": "\n",
   "space-before-opening-brace": " ",
   "space-after-opening-brace": "\n",
   "space-after-selector-delimiter": "\n",
   "space-before-selector-delimiter": "",
   "space-before-closing-brace": "\n",
+  "strip-spaces": true,
   "tab-size": true,
-  "vendor-prefix-align": true,
+  "unitless-zero": true,
+  "vendor-prefix-align": false,
   "sort-order": [
     [
       "content",
@@ -34,9 +35,7 @@
       "right",
       "bottom",
       "left",
-      "z-index"
-    ],
-    [
+      "z-index",
       "display",
       "-webkit-flex",
       "-ms-flex",
@@ -91,9 +90,7 @@
       "overflow-x",
       "-ms-overflow-y",
       "overflow-y",
-      "-webkit-overflow-scrolling"
-    ],
-    [
+      "-webkit-overflow-scrolling",
       "list-style",
       "list-style-position",
       "list-style-type",
@@ -108,6 +105,7 @@
       "font-size",
       "line-height",
       "font-family",
+      "src",
       "vertical-align",
       "text-align",
       "direction",
@@ -169,9 +167,7 @@
       "text-shadow",
       "page-break-after",
       "page-break-before",
-      "page-break-inside"
-    ],
-    [
+      "page-break-inside",
       "background",
       "background-color",
       "background-image",
@@ -285,9 +281,7 @@
       "cursor",
       "opacity",
       "-webkit-filter",
-      "filter"
-    ],
-    [
+      "filter",
       "-webkit-transition",
       "-moz-transition",
       "-ms-transition",
@@ -352,9 +346,7 @@
       "-moz-animation-direction",
       "-ms-animation-direction",
       "-o-animation-direction",
-      "animation-direction"
-    ],
-    [
+      "animation-direction",
       "quotes",
       "counter-reset",
       "counter-increment",

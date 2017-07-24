@@ -3,8 +3,8 @@ html {
 }
 
 *,
-*:before,
-*:after {
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
@@ -19,6 +19,7 @@ html {
 
 body {
   min-height: 100vh;
+  min-width: 1170px;
   position: relative;
   font-family: $font;
   margin: 0;
@@ -26,7 +27,6 @@ body {
   font-size: 18px;
   font-weight: 400;
   line-height: 1.42;
-  overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -91,16 +91,18 @@ p {
 }
 
 .btn {
-  width: 165px;
-  height: 30px;
-  border: 1px solid white;
-  border-radius: 15px;
+  padding: 5px 20px;
+  border: 2px solid white;
+  border-radius: 25px;
   background-color: transparent;
   color: #fff;
   &:hover {
     cursor: pointer;
     background-color: white;
     color: $accent-color;
+  }
+  &:active{
+    opacity: 0.5;
   }
 }
 
@@ -127,4 +129,9 @@ section {
   padding-bottom: 5px;
   font-size: 24px;
   font-weight: 700;
+  &--portfolio{
+    display:inline ;
+    background-position: 0;
+    text-transform: uppercase;
+  }
 }

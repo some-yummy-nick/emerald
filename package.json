@@ -2,14 +2,15 @@
   "name": "new",
   "private": true,
   "scripts": {
-    "build": "set NODE_ENV=production&&npm run dest&&npm run webpackbuild",
-    "prod": "set NODE_ENV=production&&npm run dest&&npm run webpackbuild",
+    "build": "set NODE_ENV=production&&npm run clean&&npm run webpackbuild&&npm run dest",
+    "prod": "set NODE_ENV=production&&npm run clean&&npm run webpackbuild&&npm run dest",
     "start": "parallelshell \"npm run gulp\" \"npm run webpack\"",
     "webpack": "webpack",
     "webpackbuild": "webpack -p",
     "dest": "gulp build",
     "deploy": "gh-pages -d dest",
     "sprite": "svg-sprite-generate -d ./src/images/svg/ -o ./src/images/sprite.svg",
+    "clean": "gulp clean",
     "gulp": "gulp"
   },
   "devDependencies": {
@@ -37,8 +38,11 @@
     "gulp-lazy-task": "0.0.15",
     "gulp-plumber": "^1.1.0",
     "gulp-postcss": "^6.2.0",
+    "gulp-purifycss": "^0.2.0",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.3.1",
+    "gulp-stylefmt": "^1.1.0",
+    "gulp-stylelint": "^3.9.0",
     "gulp-svgmin": "^1.2.3",
     "gulp-svgstore": "^6.1.0",
     "gulp-task-master": "^1.1.1",
@@ -57,7 +61,6 @@
     "postcss-csscomb": "^1.0.2",
     "postcss-easysprites": "^0.1.8",
     "postcss-filter-gradient": "^1.0.0",
-    "postcss-flexibility": "^1.1.1",
     "postcss-inline-svg": "^3.0.0",
     "postcss-line-height-px-to-unitless": "^0.2.1",
     "postcss-object-fit-images": "^1.1.2",
@@ -66,11 +69,15 @@
     "run-sequence": "^1.2.2",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
+    "stylelint-config-standard": "^17.0.0",
     "webpack": "^3.0.0"
   },
   "browserslist": [
     "last 10 versions",
     ">5%",
     "IE 10"
-  ]
+  ],
+  "dependencies": {
+    "fontawesome-scss": "^2.0.4"
+  }
 }
