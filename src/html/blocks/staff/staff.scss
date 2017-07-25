@@ -1,16 +1,104 @@
 .staff {
   position: relative;
   height: 1140px;
+  padding-top: 50px;
   background-image: url('../images/staff-bg.jpg');
   background-position: center;
+  color: #00644b;
   &::after {
     position: absolute;
-    bottom: -23px;
+    bottom: -21px;
     z-index: 3;
     display: block;
     width: 100%;
-    height: 24px;
+    height: 21px;
     content: "";
     background-image: url(../images/wave-staff-bottom.png);
+  }
+  &__promo {
+    position: relative;
+    width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    padding-left: 293px;
+  }
+  &__promo-title {
+    font-size: 24px;
+    font-weight: 700;
+  }
+  &__promo-title-small {
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+  &__promo-text {
+    margin-top: 22px;
+    font-style: italic;
+    line-height: 22px;
+  }
+  &__promo-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 260px;
+    height: 260px;
+    border: 2px solid $accent-color;
+    border-radius: 100%;
+    overflow: hidden;
+  }
+  &__items {
+    position: relative;
+  }
+  &__item {
+    position: absolute;
+    max-width: 282px;
+    text-align: center;
+    p {
+      margin-bottom: 5px;
+    }
+    &:nth-child(1) {
+      top: 0;
+      left: 50px;
+    }
+    &:nth-child(2) {
+      top: 35px;
+      left: 350px;
+    }
+    &:nth-child(3) {
+      top: 10px;
+      left: 600px;
+    }
+    &:nth-child(4) {
+      top: 65px;
+      left: 870px;
+    }
+    &:nth-child(5) {
+      top: 355px;
+      left: 85px;
+    }
+    &:nth-child(6) {
+      top: 375px;
+      left: 320px;
+    }
+    &:nth-child(7) {
+      top: 345px;
+      left: 590px;
+    }
+    &:nth-child(8) {
+      top: 385px;
+      left: 825px;
+    }
+  }
+  &__image {
+    border-radius: 100%;
+    width: 165px;
+    height: 165px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid $accent-color;
+    overflow: hidden;
+    img{
+
+    }
   }
 }

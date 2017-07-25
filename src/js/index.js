@@ -3,3 +3,6 @@ import hamburger from "./hamburger";
 import links from "./links";
 links();
 hamburger();
+$('.slider').slick({
+  dots: true
+});

@@ -72,7 +72,7 @@
   &__bottom {
     width: 100%;
     position: absolute;
-    bottom: 40px;
+    bottom: 50px;
 
   }
   &__title {
@@ -82,5 +82,14 @@
     font-family: Kurale;
     font-size: 36px;
     text-align: center;
+  }
+  &__contacts {
+    position: relative;
+    &::after {
+      position: absolute;
+      top: 10px;
+      left: -40px;
+      @include fa($fa-phone,#fff, 34px);
+    }
   }
 }

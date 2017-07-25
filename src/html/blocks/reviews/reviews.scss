@@ -1,0 +1,100 @@
+.reviews{
+  position: relative;
+  z-index: 7;
+  height: 880px;
+  background-image: url('../images/reviews-bg.jpg');
+  background-position: 5px 0;
+  .section__title{
+    color: #fff;
+  }
+  .slider{
+    width: 945px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    &__item{
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    &__block{
+      display: flex;
+      justify-content: space-between;
+      width: 457px;
+      margin-bottom: 20px;
+      padding: 25px 20px;
+      overflow: hidden;
+      border-radius: 15px;
+      background-image: url('../images/reviews-item-bg.jpg');
+      background-repeat: no-repeat;
+
+      color: $accent-color;
+    }
+    &__block-left{
+      width: 145px;
+      text-align: center;
+    }
+    &__block-right{
+      width: 257px;
+    }
+    &__image{
+      width: 140px;
+      height: 140px;
+      img{
+        width: 140px;
+        height: 140px;
+        border-radius: 100%;
+        object-fit: cover;
+      }
+    }
+    &__title{
+      font-size: 24px;
+      font-weight: 700;
+    }
+    &__time{
+      font-size: 20px;
+    }
+    &__text{
+      font-size: 15px;
+      font-style: italic;
+    }
+  }
+}
+.slick-prev.slick-arrow,.slick-next.slick-arrow{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.slick-prev.slick-arrow{
+  left: -60px;
+  @include fa($fa-chevron-left , #fff ,45px);
+
+}
+.slick-next.slick-arrow{
+  right: -60px;
+
+  @include fa($fa-chevron-right , #fff ,45px);
+}
+.slick-dots{
+  text-align: center;
+  li{
+    @include inlineBlock();
+    width: 20px;
+    height: 20px;
+    @include marginRight();
+    border-radius: 100%;
+    font-size: 0;
+    border: 1px solid white;
+  }
+  button{
+    display: none !important;
+  }
+  .slick-active{
+    background-color:#fff;
+  }
+}

@@ -75,9 +75,6 @@ gulp.task('html', () => {
 
 gulp.task('styles', () => {
   return gulp.src('src/styles/style.scss')
-    .pipe(gulpIf(NODE_ENV === 'development',
-      sourcemaps.init()
-    ))
     .pipe(plumber({
       errorHandler: function (error) {
         gutil.log('Error: ' + error.message);
@@ -86,10 +83,7 @@ gulp.task('styles', () => {
     }))
     .pipe(sass())
     .pipe(postcss(processors))
-    .pipe(gulpIf(NODE_ENV === 'development',
-      sourcemaps.write()
-    ))
-    .pipe(purify(['./dest/js/**/*.js', './dest/**/*.html']))
+    .pipe(purify(['./dest/js/**/*.js','./dest/libraries/**/*.*', './dest/**/*.html']))
     .pipe(stylefmt())
     .pipe(gulpIf(NODE_ENV === 'production',
       cssnano()
@@ -99,11 +93,8 @@ gulp.task('styles', () => {
 });
 
 gulp.task('images', () => {
-  return gulp.src('src/images/*.+(jpg|JPG|png|svg)')
+  return gulp.src('src/images/*.+(jpg|JPG|png)')
     .pipe(imagemin({
-      svgo: {
-        removeViewBox: true
-      },
       optipng: {
         optimizationLevel: 5
       },

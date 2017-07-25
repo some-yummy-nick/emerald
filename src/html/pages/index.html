@@ -17,7 +17,9 @@
   <!--FAVICONS-->
   @@include('../components/favicon.html')<!--FAVICONS END-->
   <!--VENDOR CSS-->
-  <link rel="stylesheet" type="text/css" href="styles/vendor.css" media="screen, projection, print"><!--VENDOR CSS END-->
+  <link rel="stylesheet" type="text/css" href="styles/vendor.css" media="screen, projection, print">
+  <link rel="stylesheet" type="text/css" href="libraries/slick.css"/>
+  <!--VENDOR CSS END-->
   <!--MAIN CSS-->
   <link rel="stylesheet" type="text/css" href="styles/style.css" media="screen, projection, print"><!--MAIN CSS END-->
   <!--[if lt IE 9]> <script src="//html5shiv.googlecode.com/ svn/trunk/html5.js"></script><![endif]-->
@@ -25,6 +27,9 @@
 </head>
 <body>
 <script>var yaBrowserUpdater = new ya.browserUpdater.init({"lang":"ru","browsers":{"yabrowser":"15.12","chrome":"54","ie":"10","opera":"41","safari":"8","fx":"49","iron":"35","flock":"Infinity","palemoon":"25","camino":"Infinity","maxthon":"4.5","seamonkey":"2.3"},"theme":"yellow"});</script>
+<div class="svg-wrapper" style="height: 0; width: 0; position: absolute; visibility: hidden">
+  @@include('../components/svg.html')
+</div>
 <div class="wrapper">
   <div class="content">
     <!--HEADER-->
@@ -39,10 +44,20 @@
     @@include('../blocks/cost/cost.html')<!--COST END-->
     <!--STAFF-->
     @@include('../blocks/staff/staff.html')<!--STAFF END-->
+    <!--SITE-->
+    @@include('../blocks/site/site.html')<!--SITE END-->
+    <!--REVIEWS-->
+    @@include('../blocks/reviews/reviews.html')<!--REVIEWS END-->
+    <!--ORGANIZE-->
+    @@include('../blocks/organize/organize.html')<!--ORGANIZE END-->
+    <!--SECRETS-->
+    @@include('../blocks/secrets/secrets.html')<!--SECRETS END-->
   </div>
   <!--FOOTER-->
   @@include('../blocks/footer/footer.html')<!--FOOTER END-->
 </div>
-<script src="js/index.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript" src="libraries/slick.min.js">
+</script><script src="js/index.js"></script>
 </body>
 </html>

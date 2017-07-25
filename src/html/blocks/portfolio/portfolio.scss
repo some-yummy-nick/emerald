@@ -1,10 +1,9 @@
-@import "../../../../node_modules/fontawesome-scss/fontAwesome";
-
 .portfolio {
   position: relative;
   height: 1160px;
   padding-top: 50px;
   background-image: url('../images/portfolio-bg.jpg');
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   color: $accent-color;

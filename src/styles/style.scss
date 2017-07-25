@@ -1,3 +1,4 @@
+@import "../../node_modules/fontawesome-scss/fontAwesome";
 @import "base/fonts";
 @import "utils/variables";
 @import "utils/mixins";
@@ -10,4 +11,8 @@
 @import "../html/blocks/portfolio/portfolio";
 @import "../html/blocks/cost/cost";
 @import "../html/blocks/staff/staff";
+@import "../html/blocks/site/site";
+@import "../html/blocks/reviews/reviews";
+@import "../html/blocks/organize/organize";
+@import "../html/blocks/secrets/secrets";
 @import "../html/blocks/footer/footer";
