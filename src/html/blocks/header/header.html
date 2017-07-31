@@ -1,33 +1,33 @@
 <header class="header">
-  <div class="header__top">
+  <div class="header__top" id="header__top">
     <div class="container">
+      <div class="header__word-menu">Меню</div>
       <div class="header__menu">
         @@include('../../components/hamburger/hamburger.html')
-        <div class="header__word-menu">Меню</div>
         <ul id="js-hided" class="header__hided-menu js-hided">
           <li>
-            <a href="">Главная</a>
+            <a href="#header__top">Главная</a>
           </li>
           <li>
-            <a href="">Услуги</a>
+            <a href="#services">Услуги</a>
           </li>
           <li>
-            <a href="">Портфолио</a>
+            <a href="#portfolio">Портфолио</a>
           </li>
           <li>
-            <a href="">Стоимость</a>
+            <a href="#cost">Стоимость</a>
           </li>
           <li>
-            <a href="">Наша команда</a>
+            <a href="#staff">Наша команда</a>
           </li>
           <li>
-            <a href="">Площадка-партнер</a>
+            <a href="#site">Площадка-партнер</a>
           </li>
           <li>
-            <a href="">Отзывы</a>
+            <a href="#reviews">Отзывы</a>
           </li>
           <li>
-            <a href="">Не свадебные проекты</a>
+            <a href="#organize">Наши не свадебные проекты</a>
           </li>
           <li>
             <a href="">Контакты</a>
@@ -45,13 +45,26 @@
         <a href="tel:+79853941057" class="header__text header__text--phone  header__text--highlight">+7&nbsp;(985)&nbsp;394-10-57</a>
       </div>
       <div class="header__phone">
-        <a class="btn" href="">Заказать звонок</a>
+        <a class="btn  review" href="">Заказать звонок</a>
+      </div>
+      <div class="popup  js-hided">
+        <form class="popup__form" id="header__form">
+          <p>Консультация свадебного специалиста с опытом организации <strong>более 200 свадеб!</strong></p>
+          <div class="popup__field popup__field--name">
+            <input  type="text" placeholder="Ваше имя">
+          </div>
+          <div class="popup__field popup__field--phone">
+            <input type="tel" placeholder="Номер телефона">
+          </div>
+          <button class="popup__btn" type="submit">Оставить заявку</button>
+        </form>
+        <div class="popup__close"></div>
       </div>
     </div>
   </div>
   <div class="header__bottom">
     <div class="container">
-      <h1 class="header__title">Наш 10 летний опыт организации свадебных торжеств Поможет Вам сэкономить до 15% от свадебного бюджета И около 3-х месяцев, самостоятельной подготовки.
+      <h1 class="header__title">Наш 10 летний опыт организации свадебных торжеств Поможет Вам сэкономить до 15% от свадебного бюджета И около 3-х месяцев самостоятельной подготовки.
       </h1>
     </div>
   </div>

@@ -19,15 +19,16 @@
     }
   }
   &__hided-menu {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
     position: absolute;
     width: 220px;
     left: 0;
-    top: 75px;
-
+    top: 70px;
+    z-index: 10;
+    margin: 0;
+    padding: 0;
     background-color: #fff;
+    list-style-type: none;
+
     li {
       border-bottom: 1px solid $accent-color;
     }
@@ -44,10 +45,13 @@
     }
   }
   &__menu {
+    position: fixed;
+    z-index: 10;
     display: flex;
     margin-top: 8px;
   }
   &__word-menu {
+    margin-left: 60px;
     margin-top: 5px;
   }
   &__text {

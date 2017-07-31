@@ -1,4 +1,4 @@
-<section class="cost">
+<section class="cost" id="cost">
   <div class="container">
     <h2 class="section__title">Стоимость</h2>
     <div class="cost__items">
@@ -31,7 +31,8 @@
       </div>
       <div class="cost__item">
         <h3 class="cost__title">Premium <br>Организация свадьбы</h3>
-        <p class="cost__text">Это предложение идеально подходит для свадебных торжеств, если приглашённых гостей будет <strong>100 и более человек.</strong></p>
+        <p class="cost__text">Это предложение идеально подходит для свадебных торжеств, если приглашённых гостей будет
+          <strong>100 и более человек.</strong></p>
         <ul>
           <li>– Если в расписании свадебного дня запланирована насыщенная программа с развлечениями и артистами.</li>
           <li>– С утра ВАС будет сопровождать координатор, который возьмет на себя хлопоты первой половины дня.</li>
@@ -40,7 +41,23 @@
         <div class="cost__price"><span>57000 ₽</span></div>
       </div>
     </div>
-    <p class="cost__consultation">Подробная консультация по телефону: <a href="tel:+74951955722">+7 (495) 195-57-22</a> или оставьте заявку: </p>
-    <a href="" class="btn">Оставить заявку</a>
+    <div class="popup popup--cost  js-hided">
+      <form class="popup__form" id="cost__form">
+        <p>Консультация свадебного специалиста с опытом организации <strong>более 200 свадеб!</strong></p>
+        <div class="popup__field popup__field--name">
+          <input  type="text" placeholder="Ваше имя">
+        </div>
+        <div class="popup__field popup__field--phone">
+          <input type="tel" placeholder="Номер телефона">
+        </div>
+        <button class="popup__btn" type="submit">Оставить заявку</button>
+      </form>
+      <div class="popup__close"></div>
+    </div>
+    <p class="cost__consultation">Подробная консультация по телефону: <a href="tel:+74951955722">+7 (495) 195-57-22</a>
+      или оставьте заявку: </p>
+    <div class="cost__review">
+      <a href="" class="btn review">Оставить заявку</a>
+    </div>
   </div>
 </section>

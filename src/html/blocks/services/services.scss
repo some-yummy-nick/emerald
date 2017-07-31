@@ -48,4 +48,30 @@
       max-width: 176px;
     }
   }
+  &__hover {
+    position: absolute;
+    top: 0;
+    left: 180px;
+    z-index: 5;
+    width: 376px;
+    padding: 15px 25px;
+    background-color: white;
+    border: 1px solid #007558;
+    border-radius: 15px;
+    color: $accent-color;
+    p{
+      margin-bottom: 10px;
+    }
+    ul{
+      @include noList;
+    }
+    &--banket{
+      top: 195px;
+      left: 0;
+    }
+  }
+  &__hover-title{
+    font-size: 24px;
+    font-weight: 700;
+  }
 }
